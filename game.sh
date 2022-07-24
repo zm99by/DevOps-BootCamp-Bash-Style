@@ -29,7 +29,7 @@ while [ $ch -ne 3 ]; do
         c=1
         break
       fi
-      if [ ${r[$(($x))-1]} -eq $n ]; then
+      if [ "${r[$(("$x"))-1]}" -eq "$n" ]; then
         echo "Great"
         (( p=p+1 ))
       else
@@ -37,7 +37,7 @@ while [ $ch -ne 3 ]; do
         break
       fi
     done
-  elif [ $ch -eq 2 ]; then
+  elif [ "$ch" -eq 2 ]; then
     echo "HELP: INSTRUCTIONS TO PLAY THE GAME. "
   else
     break
