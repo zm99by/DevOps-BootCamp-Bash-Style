@@ -22,7 +22,7 @@ while [ $ch -ne 3 ]; do
       r=( "$(shuf -i 0-9 -n 10)" )
       echo "${r[*]} "
       for i in {1..10}; do
-        a[$i]=$i
+        a["$i"]=$i
       done
       echo "${a[*]} "
       read -t 5 -p -r "Enter the index of your number : " x
@@ -47,7 +47,7 @@ while [ $ch -ne 3 ]; do
     break
   fi
 
-  if (( $c == 1 )); then
+  if (( "$c" == 1 )); then
     echo -e "\nGAME OVER\n"
     echo "You scored $p points"
   fi
