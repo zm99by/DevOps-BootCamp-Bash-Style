@@ -47,7 +47,7 @@ while [ $ch -ne 3 ]; do
     break
   fi
 
-  if (( $c -eq 1 )); then
+  if (( $c == 1 )); then
     echo -e "\nGAME OVER\n"
     echo "You scored $p points"
   fi
