@@ -1,5 +1,6 @@
 #!/bin/bash
-#This script is game Number
+#
+#This script is game "Number"
 
 echo -e "\n NumberJack \n"
 ch=0
@@ -18,11 +19,11 @@ while [ $ch -ne 3 ]; do
     while [ $c -eq 0 ]; do
       x=11
       r=( "$(shuf -i 0-9 -n 10)" )
-      echo "${r[@]} " 
+      echo "${r[*]} "
       for i in {1..10}; do
         a[$i]=$i
       done
-      echo "${a[@]} "
+      echo "${a[*]} "
       read -t 5 -p -r "Enter the index of your number : " x
       if [[ $? -gt 128 ]]; then
         c=1

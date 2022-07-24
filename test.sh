@@ -1,5 +1,3 @@
-
-
 #!/bin/bash
 #
 # This script is doing something.
