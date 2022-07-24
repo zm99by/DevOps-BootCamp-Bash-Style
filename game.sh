@@ -17,13 +17,16 @@ while [ $ch -ne 3 ]; do
     c=0
     p=0
     read -p -r "Enter any number between 0 and 9 : " n
+    
     while [ $c -eq 0 ]; do
       x=11
       r=( "$(shuf -i 0-9 -n 10)" )
       echo "${r[*]} "
+      
       for i in {1..10}; do
         a["$i"]=$i
       done
+      
       echo "${a[*]} "
       read -t 5 -p -r "Enter the index of your number : " x
 
@@ -41,13 +44,13 @@ while [ $ch -ne 3 ]; do
       fi
     done
     
-  elif [[ $ch -eq 2 ]]; then
-    echo "HELP: INSTRUCTIONS TO PLAY THE GAME. "
-  else
-    break
-  fi
+    elif [[ $ch -eq 2 ]]; then
+      echo "HELP: INSTRUCTIONS TO PLAY THE GAME. "
+    else
+      break
+    fi
 
-  if (( "$c" == 1 )); then
+  if [[ "$c" -eq 1 ]]; then
     echo -e "\nGAME OVER\n"
     echo "You scored $p points"
   fi
