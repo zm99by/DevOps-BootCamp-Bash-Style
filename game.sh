@@ -34,20 +34,20 @@ while [ $ch -ne 3 ]; do
 
       if [[ ${r[$((x))-1]} -eq $n ]]; then
         echo "Great"
-        (( p=p+1 ))
+        ((p++))
       else
         c=1
         break
       fi
     done
-
+    
   elif [[ $ch -eq 2 ]]; then
     echo "HELP: INSTRUCTIONS TO PLAY THE GAME. "
   else
     break
   fi
 
-  if [ $c -eq 1 ]; then
+  if (( $c -eq 1 )); then
     echo -e "\nGAME OVER\n"
     echo "You scored $p points"
   fi
